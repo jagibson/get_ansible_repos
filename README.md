@@ -9,3 +9,5 @@ To Use:
 
 4. Within your roles directory, run get_repos.py.  It will clone any roles that are absent as long as they follow the ansible-role-* naming convention.
 
+
+TODO: allow arbitrary string to be used.  right now 'ansible-role-' is hardcoded
