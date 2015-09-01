@@ -1,5 +1,7 @@
 Finds and clones github all repos matching string
 
+Requires pygithub
+
 To Use:
 1.  Create a Personal access token in your account on GitHub.  https://github.com/settings/tokens  You should only need "repo" and "public repo" scopes.
 
