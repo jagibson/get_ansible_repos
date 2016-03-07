@@ -6,10 +6,12 @@ import os
 
 token = os.environ['GITHUB_TOKEN']
 github_user = os.environ['GITHUB_USER']
+search_pattern = os.environ.get('GITHUB_REPO_PATTERN', 'ansible-role-')
 
 g = Github(login_or_token=token)
 
-repolist = g.search_repositories("ansible-role- user:%s in:name" % (github_user))
+repolist = g.search_repositories("%s user:%s in:name" % 
+                            (search_pattern, github_user))
 
 for repo in repolist:
   if os.path.exists(repo.name):
